@@ -1,12 +1,14 @@
-export default (state, action) => {
+const locationReducer = (state, action) => {
+    console.log("state222", state)
     switch (action.type) {
-      case "latlong":
+    case "latlong":
         console.log("reducer", action)
         return {
-          lat: action.payload.lat,
-          long: action.payload.long
+            lat: action.payload.lat,
+            long: action.payload.long
         };
-      default:
-        return state;
-    }
-  };
+    default:
+        return {};
+}
+};
+export default locationReducer;

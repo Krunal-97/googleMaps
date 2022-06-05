@@ -1,8 +1,17 @@
-import { createStore } from "redux";
-import locationReducer from "./reducers/locationReducer";
+import { configureStore } from '@reduxjs/toolkit'
+import reducers from './reducers/index';
+import {createStore,applyMiddleware} from 'redux';
+import logger from 'redux-logger'
 
-function configureStore(state = { lat: 0, long: 0 }) {
-  return createStore(locationReducer,state);
-}
+console.log("reducers", reducers, typeof reducers)
+const state = { lat: 0, long: 0 }
+// const store = configureStore({
+//     reducers,
+//     state,
+// })
+const store = configureStore({
+    reducer: reducers,
+    initialState: {}
+})
 
-export default configureStore;
+export default store;

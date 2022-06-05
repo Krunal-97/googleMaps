@@ -1,24 +1,34 @@
 import React, { useState } from 'react';
+
 import '../assests/styles/search.css';
 import PlacesAutocomplete, {
     geocodeByAddress,
     getLatLng,
   } from 'react-places-autocomplete';
 import {MagnifyingGlass, X} from "phosphor-react";
-import { connect } from "react-redux";
+import { connect, useSelector } from "react-redux";
 // import rotateAction from "actions/rotateAction";
 import setLatLong from '../actions/setLatLong';
 
 function Search(props) {
     const [address, setAddress] = useState('');
 
+    const state = useSelector((state)=>state)
+    console.log("state123", state)
+
     const handleSelect = address => {
         console.log("address", address)
         setAddress(address);
-        props.setLatLong({lat: -2, long: -2})
+
         geocodeByAddress(address)
             .then(results => getLatLng(results[0]))
-            .then(latLng => console.log('Success', latLng))
+            .then(latLng => {
+                console.log('Success', latLng)
+                props.setLatLong({
+                    lat: latLng.lat,
+                    long: latLng.lng
+                })
+            })
             .catch(error => console.error('Error', error));
     };
 
