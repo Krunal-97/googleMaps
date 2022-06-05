@@ -14,10 +14,8 @@ function Search(props) {
     const [address, setAddress] = useState('');
 
     const state = useSelector((state)=>state)
-    console.log("state123", state)
 
     const handleSelect = address => {
-        console.log("address", address)
         setAddress(address);
 
         geocodeByAddress(address)
@@ -35,10 +33,6 @@ function Search(props) {
     const handleChange = address => {
         setAddress(address);
     };
-
-    const setLatLong = () => {
-        console.log("Waah")
-    }
 
     const mapStateToProps = state => ({
         ...state
