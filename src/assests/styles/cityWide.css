@@ -1,0 +1,107 @@
+.citywide_container {
+}
+
+.main_head {
+  font-size: 24px;
+}
+.legend_text {
+  font-size: 10px;
+  padding-left: 5px;
+}
+
+.sec_1_head_fonts {
+  font-size: 16px;
+}
+.sec_1_head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #6c7174;
+  padding: 5px 0;
+  margin: 15px 0;
+}
+.sec_clr_info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.sec_subhead_info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 25px;
+}
+.sec_subhead_text {
+  font-size: 16px;
+  padding: 0 5px;
+  border-bottom: 1px solid #ffff;
+}
+.sec_1_clr,
+.sec_2_clr {
+  height: 26px;
+  width: 26px;
+  border-radius: 50%;
+  background-color: #cc526c;
+  border: 1px solid white;
+  display: inline-block;
+  margin-right: 5px;
+}
+.sec_1_info {
+  padding: 15px 0;
+}
+.sec_1_info_text {
+  font-size: 16px;
+}
+
+.sec_2_clr {
+  background-color: #ffffff;
+}
+.btn_clr {
+  background-color: #55b570;
+}
+.lenegd_clr_sec {
+  display: flex;
+  flex-direction: row;
+}
+.left_bar,
+.right_bar {
+  display: flex;
+  flex-direction: column;
+}
+.sec_1_clr_l {
+  height: 9px;
+  width: 9px;
+  display: inline-block;
+}
+
+.l1 {
+  background-color: #f8e592;
+}
+.l2 {
+  background-color: #f1b168;
+}
+.l3 {
+  background-color: #ce5368;
+}
+.l4 {
+  background-color: #a0cf96;
+}
+.l5 {
+  background-color: #52b371;
+}
+.l6 {
+  background-color: #cecfcf;
+}
+.l7 {
+  background-color: #4c88bb;
+}
+.l8 {
+  background-color: #99725a;
+}
+.l9 {
+  background-color: #c4c4c4;
+}
+.l10 {
+  background-color: #cbceb8;
+}
