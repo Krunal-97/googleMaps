@@ -1,33 +1,28 @@
-import React from "react";
-import { Switch } from "antd";
-import { Question, MapTrifold, Book } from "phosphor-react";
+import React, { useState } from "react";
+import { MapTrifold, Book } from "phosphor-react";
+
 import "../assests/styles/cityWide.css";
+import SwitchBtn from "./subcomponents/SwitchBtn";
+import AreaInfoHead from "./subcomponents/AreaInfoHead";
 
 function CityWide(props) {
+  const switchVal_1 = "Official Plan Land Use";
+  const switchVal_2 = "Secondary Plan";
+
+  const areaInfoHead_1 = ["Mixed Use Area:"];
+  const areaInfoHead_2 = ["41 - Downtown Plan:"];
+  const areaInfoHead_3 = ["39 King - Parliament:"];
+
   return (
     <div className="citywide_container container">
       <div className="citywide_heading heading">
         <p className="main_head">Official Plan</p>
       </div>
+
       <div className="citywide_subheading_1 citywide_subheading">
-        <div className="sec_1_head">
-          <span className="sec_1_head_fonts">
-            Official Plan Land Use <Question size={18} />
-          </span>
-          <Switch className="btn_clr" size="small" defaultChecked />
-        </div>
-        <div className="sec_1_info">
-          <p className="sec_clr_info">
-            <div className="sec_1_clr" />
-            <span className="sec_1_info_text">Mixed Use Area:</span>
-          </p>
-          <span className="sec_subhead_info">
-            <MapTrifold size={24} />
-            <span className="sec_subhead_text">Map</span>
-            <Book size={24} />
-            <span className="sec_subhead_text">Policy</span>
-          </span>
-        </div>
+        <SwitchBtn val={switchVal_1} />
+        <AreaInfoHead val={areaInfoHead_1} className="sec_1_clr" />
+
         <div className="sec_1_legend_info">
           <p>Legend:</p>
 
@@ -80,38 +75,9 @@ function CityWide(props) {
         </div>
       </div>
       <div className="citywide_subheading_2 citywide_subheading">
-        <div className="sec_1_head">
-          <span className="sec_1_head_fonts">
-            Secondary Plan <Question size={18} />
-          </span>
-          <Switch className="btn_clr" size="small" defaultChecked />
-        </div>
-
-        <div className="sec_1_info">
-          <p className="sec_clr_info">
-            <div className="sec_2_clr" />
-            <span className="sec_1_info_text">41 - Downtown Plan:</span>
-          </p>
-          <span className="sec_subhead_info">
-            <MapTrifold size={24} />
-            <span className="sec_subhead_text">Map</span>
-            <Book size={24} />
-            <span className="sec_subhead_text">Policy</span>
-          </span>
-        </div>
-
-        <div className="sec_1_info">
-          <p className="sec_clr_info">
-            <div className="sec_2_clr" />
-            <span className="sec_1_info_text">39 King - Parliament:</span>
-          </p>
-          <span className="sec_subhead_info">
-            <MapTrifold size={24} />
-            <span className="sec_subhead_text">Map</span>
-            <Book size={24} />
-            <span className="sec_subhead_text">Policy</span>
-          </span>
-        </div>
+        <SwitchBtn val={switchVal_2} />
+        <AreaInfoHead val={areaInfoHead_2} className="sec_2_clr" />
+        <AreaInfoHead val={areaInfoHead_3} className="sec_2_clr" />
       </div>
     </div>
   );
