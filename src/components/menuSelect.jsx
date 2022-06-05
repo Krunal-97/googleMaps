@@ -6,6 +6,7 @@ import GovernmentLand from "./governmentLand";
 import GeneralInfo from "./info";
 import Location from "./location";
 import Sales from "./sales";
+import Search from './search';
 
 function MenuSelect(props) {
   let selectedKey = props.selectedKey;
@@ -25,7 +26,14 @@ function MenuSelect(props) {
     }
   };
 
-  return <div>{loadMenu()}</div>;
+  return(
+    <div>
+      <Search/>
+      {
+        loadMenu()
+      }
+    </div>
+  );
 }
 
 export default MenuSelect;
