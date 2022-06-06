@@ -1,6 +1,7 @@
 import React from "react";
 import { GoogleMap, Marker, useJsApiLoader } from "@react-google-maps/api";
 import { useSelector } from "react-redux";
+import store from '../store';
 
 const containerStyle = {
   width: "950px",
@@ -13,24 +14,27 @@ function GoogleMaps() {
     googleMapsApiKey: "AIzaSyDbkBoi9cEOLxezElsj5Su9xhsiUCvrAOA",
   });
 
-  //   let { location } = useSelector((state) => state);
-  //   console.log("mapsCOMP", location);
-
   const [map, setMap] = React.useState(null);
+  const [lat, setLat] = React.useState(49.0);
+  const [lng, setLng] = React.useState(-79.90);
 
-  //   let center = {
-  //     lat: location.lat,
-  //     lng: location.long,
-  //   };
 
   let center = {
-    lat: 40.0,
-    lng: -79.9,
+    lat: lat,
+    lng: lng,
   };
+
+  store.subscribe(() => {
+    let {location} = store.getState()
+    center.lat = location.lat;
+    center.lng = location.lng;
+    setLat(location.lat);
+    setLng(location.long);
+  })
 
   const onLoad = React.useCallback(function callback(map) {
     const bounds = new window.google.maps.LatLngBounds(center);
-    map.fitBounds(bounds);
+    // map.fitBounds(bounds);
     setMap(map);
   }, []);
 
@@ -48,7 +52,9 @@ function GoogleMaps() {
     >
       {/* Child components, such as markers, info windows, etc. */}
       <>
-        <Marker position={center} />
+        <Marker
+        onLoad={onLoad}
+        position={center} />
       </>
     </GoogleMap>
   ) : (
