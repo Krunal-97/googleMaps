@@ -13,8 +13,8 @@ import setLatLong from '../actions/setLatLong';
 function Search(props) {
     const [address, setAddress] = useState('');
 
-    const state = useSelector((state)=>state)
-
+    const {location} = useSelector((state)=>state)
+    console.log("state1222", location)
     const handleSelect = address => {
         setAddress(address);
 

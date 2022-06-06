@@ -6,7 +6,10 @@ const locationReducer = (state, action) => {
             long: action.payload.long
         };
     default:
-        return {};
+        return {
+            lat: 43.653226,
+            long: -79.3831843
+        };
 }
 };
 export default locationReducer;
