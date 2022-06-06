@@ -1,104 +1,125 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-import '../assests/styles/search.css';
+import "../assests/styles/search.css";
 import PlacesAutocomplete, {
-    geocodeByAddress,
-    getLatLng,
-  } from 'react-places-autocomplete';
-import {MagnifyingGlass, X} from "phosphor-react";
+  geocodeByAddress,
+  getLatLng,
+} from "react-places-autocomplete";
+import { MagnifyingGlass, X } from "phosphor-react";
 import { connect, useSelector } from "react-redux";
 // import rotateAction from "actions/rotateAction";
-import setLatLong from '../actions/setLatLong';
+import setLatLong from "../actions/setLatLong";
 
 function Search(props) {
-    const [address, setAddress] = useState('');
+  const [address, setAddress] = useState("");
 
-    const {location} = useSelector((state)=>state)
-    console.log("state1222", location)
-    const handleSelect = address => {
-        setAddress(address);
+  const location = useSelector((state) => state);
+  console.log("searchCOMP", location);
 
-        geocodeByAddress(address)
-            .then(results => getLatLng(results[0]))
-            .then(latLng => {
-                console.log('Success', latLng)
-                props.setLatLong({
-                    lat: latLng.lat,
-                    long: latLng.lng
-                })
-            })
-            .catch(error => console.error('Error', error));
-    };
+  const handleSelect = (address) => {
+    setAddress(address);
 
-    const handleChange = address => {
-        setAddress(address);
-    };
+    geocodeByAddress(address)
+      .then((results) => getLatLng(results[0]))
+      .then((latLng) => {
+        console.log("Success", latLng);
+        props.setLatLong({
+          lat: latLng.lat,
+          long: latLng.lng,
+        });
+      })
+      .catch((error) => console.error("Error", error));
+  };
 
-    const mapStateToProps = state => ({
-        ...state
-    })
+  const handleChange = (address) => {
+    setAddress(address);
+  };
 
-    const mapDispatchToProps = dispatch => ({
-        latlong: () => dispatch(setLatLong),
-    });
+  const mapStateToProps = (state) => ({
+    ...state,
+  });
 
-    return (
-        <PlacesAutocomplete
-            value={address}
-            onChange={(address)=>handleChange(address)}
-            onSelect={(address)=>handleSelect(address)}
-        >
-            {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
-            <div>
-                 <div>
-                    <div class="input-icons">
-                    <MagnifyingGlass style={{color: 'black', verticalAlign: 'middle', margin: '0px 8px'}} size={30} />
-                    <input
-                        value={address}
-                        name="address"
-                        type="text"
-                        {...getInputProps({
-                            placeholder: 'Search Places ...',
-                            className: 'input-field location-search-input',
-                        })}
-                    />
-                    <X size={30} style={{color: 'black', verticalAlign: 'middle'}} />
-                    </div>
-                </div>
-                <div className="autocomplete-dropdown-container">
-                {loading && <div>Loading...</div>}
-                {suggestions.map(suggestion => {
-                    const className = suggestion.active
-                    ? 'suggestion-item--active'
-                    : 'suggestion-item';
-                    // inline style for demonstration purpose
-                    const style = suggestion.active
-                    ? { backgroundColor: '#fafafa', color: 'black', cursor: 'pointer', margin: '0px 10px' }
-                    : { backgroundColor: '#ffffff', color: 'black', cursor: 'pointer', margin: '0px 10px' };
-                    return (
-                    <div
-                        {...getSuggestionItemProps(suggestion, {
-                        className,
-                        style,
-                        })}
-                    >
-                        <span>{suggestion.description}</span>
-                    </div>
-                    );
+  const mapDispatchToProps = (dispatch) => ({
+    latlong: () => dispatch(setLatLong),
+  });
+
+  return (
+    <PlacesAutocomplete
+      value={address}
+      onChange={(address) => handleChange(address)}
+      onSelect={(address) => handleSelect(address)}
+    >
+      {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
+        <div>
+          <div>
+            <div class="input-icons">
+              <MagnifyingGlass
+                style={{
+                  color: "black",
+                  verticalAlign: "middle",
+                  margin: "0px 8px",
+                }}
+                size={30}
+              />
+              <input
+                value={address}
+                name="address"
+                type="text"
+                {...getInputProps({
+                  placeholder: "Search Places ...",
+                  className: "input-field location-search-input",
                 })}
-                </div>
+              />
+              <X
+                size={30}
+                style={{ color: "black", verticalAlign: "middle" }}
+              />
             </div>
-            )}
-        </PlacesAutocomplete>
-    );
+          </div>
+          <div className="autocomplete-dropdown-container">
+            {loading && <div>Loading...</div>}
+            {suggestions.map((suggestion) => {
+              const className = suggestion.active
+                ? "suggestion-item--active"
+                : "suggestion-item";
+              // inline style for demonstration purpose
+              const style = suggestion.active
+                ? {
+                    backgroundColor: "#fafafa",
+                    color: "black",
+                    cursor: "pointer",
+                    margin: "0px 10px",
+                  }
+                : {
+                    backgroundColor: "#ffffff",
+                    color: "black",
+                    cursor: "pointer",
+                    margin: "0px 10px",
+                  };
+              return (
+                <div
+                  {...getSuggestionItemProps(suggestion, {
+                    className,
+                    style,
+                  })}
+                >
+                  <span>{suggestion.description}</span>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
+    </PlacesAutocomplete>
+  );
 }
 
-const mapStateToProps = state => ({
-    ...state
+const mapStateToProps = (state) => ({
+  ...state,
 });
 
-const mapDispatchToProps = dispatch => ({
-    setLatLong: (payload) => dispatch(setLatLong(payload)),
+const mapDispatchToProps = (dispatch) => ({
+  setLatLong: (payload) => dispatch(setLatLong(payload)),
 });
 
 // export default Search;

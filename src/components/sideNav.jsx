@@ -19,6 +19,7 @@ import {
 import { Layout, Menu } from "antd";
 
 import MenuSelect from "./menuSelect";
+import GoogleMaps from "./GoogleMaps";
 // import Location from './location';
 
 const { Header, Sider, Content } = Layout;
@@ -124,6 +125,7 @@ function SideNav(props) {
         ) : (
           <CaretCircleLeft size={32} onClick={() => setCollapsed(!collapsed)} />
         )}
+        <GoogleMaps />
       </Layout>
     </Layout>
   );
