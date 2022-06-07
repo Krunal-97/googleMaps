@@ -6,7 +6,8 @@ import GovernmentLand from "./governmentLand";
 import GeneralInfo from "./info";
 import Location from "./location";
 import Sales from "./sales";
-import Search from './search';
+import Search from "./search";
+import Zone from "./Zone";
 
 function MenuSelect(props) {
   let selectedKey = props.selectedKey;
@@ -23,15 +24,17 @@ function MenuSelect(props) {
         return <GovernmentLand />;
       case "5":
         return <CityWide />;
+      // case "6":
+      // return <CityWide />;
+      case "7":
+        return <Zone />;
     }
   };
 
-  return(
+  return (
     <div>
-      <Search/>
-      {
-        loadMenu()
-      }
+      <Search />
+      {loadMenu()}
     </div>
   );
 }

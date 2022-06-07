@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { MapTrifold, Book } from "phosphor-react";
+import { MapTrifold, Book, CaretDown, CaretUp } from "phosphor-react";
 
 import "../assests/styles/cityWide.css";
 import SwitchBtn from "./subcomponents/SwitchBtn";
@@ -24,7 +24,10 @@ function CityWide(props) {
         <AreaInfoHead val={areaInfoHead_1} className="sec_1_clr" />
 
         <div className="sec_1_legend_info">
-          <p>Legend:</p>
+          <span className="legend_head">
+            <p>Legend:</p>
+            <CaretDown className="l_icon" size={18} />
+          </span>
 
           <div className="lenegd_clr_sec">
             <div className="left_bar">
@@ -79,6 +82,10 @@ function CityWide(props) {
         <AreaInfoHead val={areaInfoHead_2} className="sec_2_clr" />
         <AreaInfoHead val={areaInfoHead_3} className="sec_2_clr" />
       </div>
+      <span className="legend_head">
+        <p>Legend:</p>
+        <CaretUp className="l_icon" size={18} />
+      </span>
     </div>
   );
 }

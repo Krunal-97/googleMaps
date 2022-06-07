@@ -1,30 +1,63 @@
 .trigger {
-    padding: 0 24px;
-    font-size: 18px;
-    line-height: 64px;
-    cursor: pointer;
-    transition: color 0.3s;
-  }
+  padding: 0 24px;
+  font-size: 18px;
+  line-height: 64px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
 
-  .trigger:hover {
-    color: #1890ff;
-  }
+.trigger:hover {
+  color: #1890ff;
+}
 
-  .logo {
-    height: 32px;
-    margin: 16px;
-    background: rgba(255, 255, 255, 0.3);
-  }
+.logo {
+  height: 32px;
+  margin: 16px;
+  background: rgba(255, 255, 255, 0.3);
+}
 
-  .site-layout .site-layout-background {
-    background: #fff;
-  }
+.site-layout .site-layout-background {
+  background: #fff;
+}
 
-  .sideInfoBar {
-    flex: 0 0 300px !important;
-    min-width: none !important;
-    max-width: none !important;
-    height: 100vh;
-    color: white;
-    background-color: #40464A;
-  }
+.sideInfoBar {
+  flex: 0 0 400px !important;
+  min-width: none !important;
+  max-width: none !important;
+  height: 100vh;
+  color: white;
+  background-color: #2f3436 !important;
+}
+.sideNav_icons {
+  background-color: #000000 !important;
+  height: 100vh;
+}
+
+.ant-menu-dark.ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item-selected {
+  background-color: #55b570;
+  margin: 0;
+}
+.ant-menu.ant-menu-inline-collapsed > .ant-menu-item {
+  padding: 0 calc(50% - 30px / 2);
+  margin-top: 20px;
+}
+.ant-menu-vertical .ant-menu-item {
+  margin-top: 50px;
+}
+/* .ant-menu-vertical .ant-menu-item:not(:last-child) {
+  margin-bottom: 20px;
+} */
+.ant-menu-item-icon {
+  color: #fff;
+  height: 36px;
+  width: 36px;
+}
+
+.main_collapse_icon {
+  position: absolute;
+  z-index: 1;
+}
+
+.map_container {
+  width: 100%;
+}

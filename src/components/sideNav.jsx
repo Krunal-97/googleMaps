@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "antd/dist/antd.css";
-import "../assests/styles/sideNav.css";
 import {
   Info,
   HouseLine,
@@ -17,9 +16,9 @@ import {
   CaretCircleLeft,
 } from "phosphor-react";
 import { Layout, Menu } from "antd";
-
 import MenuSelect from "./menuSelect";
 import GoogleMaps from "./GoogleMaps";
+import "../assests/styles/sideNav.css";
 // import Location from './location';
 
 const { Header, Sider, Content } = Layout;
@@ -39,6 +38,7 @@ function SideNav(props) {
         <Menu
           theme="dark"
           mode="inline"
+          className="sideNav_icons"
           defaultSelectedKeys={["1"]}
           onSelect={(value) => {
             handleOnChange(value);
@@ -46,61 +46,60 @@ function SideNav(props) {
           items={[
             {
               key: "1",
-
               icon: <Info size={32} />,
-              label: "nav 1",
+              label: "General Info",
             },
             {
               key: "2",
               icon: <HouseLine size={32} />,
-              label: "nav 2",
+              label: "Sales/Rent",
             },
             {
               key: "3",
               icon: <Bank size={32} />,
-              label: "nav 3",
+              label: "Government Land",
             },
             {
               key: "4",
               icon: <ChartBar size={32} />,
-              label: "nav 4",
+              label: "Demographics",
             },
             {
               key: "5",
               icon: <Notepad size={32} />,
-              label: "nav 5",
+              label: "Official Plan",
             },
             {
               key: "6",
               icon: <Buildings size={32} />,
-              label: "nav 6",
+              label: "City Wide",
             },
             {
               key: "7",
               icon: <MapPinLine size={32} />,
-              label: "nav 7",
+              label: "Zoning",
             },
             {
               key: "8",
               icon: <Target size={32} />,
-              label: "nav 8",
+              label: "Development",
             },
             {
               key: "9",
               icon: <Drop size={32} />,
-              label: "nav 9",
+              label: "Water",
             },
 
             {
               key: "10",
               icon: <Leaf size={32} />,
-              label: "nav 10",
+              label: "Environment",
             },
 
             {
               key: "11",
               icon: <CrownSimple size={32} />,
-              label: "nav 11",
+              label: "Provincial Plan",
             },
           ]}
         />
@@ -119,13 +118,18 @@ function SideNav(props) {
       <Layout className="site-layout">
         {collapsed ? (
           <CaretCircleRight
+            className="main_collapse_icon"
             size={32}
             onClick={() => setCollapsed(!collapsed)}
           />
         ) : (
-          <CaretCircleLeft size={32} onClick={() => setCollapsed(!collapsed)} />
+          <CaretCircleLeft
+            className="main_collapse_icon"
+            size={32}
+            onClick={() => setCollapsed(!collapsed)}
+          />
         )}
-        <GoogleMaps />
+        <GoogleMaps className="map_container" />
       </Layout>
     </Layout>
   );

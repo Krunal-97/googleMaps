@@ -6,17 +6,20 @@ function AreaInfoHead(props) {
   console.log({ val });
   return (
     <div>
-      {" "}
       <div className="sec_1_info">
         <p className="sec_clr_info">
           <div className={props.className} />
           <span className="sec_1_info_text">{val[0]}</span>
         </p>
         <span className="sec_subhead_info">
-          <MapTrifold size={24} />
-          <span className="sec_subhead_text">Map</span>
-          <Book size={24} />
-          <span className="sec_subhead_text">Policy</span>
+          <span className="sec_subhead_info_div">
+            <MapTrifold className="icon" size={24} />
+            <span className="sec_subhead_text">Map</span>
+          </span>
+          <span className="sec_subhead_info_div">
+            <Book className="icon" size={24} />
+            <span className="sec_subhead_text less_border">Policy</span>
+          </span>
         </span>
       </div>
     </div>

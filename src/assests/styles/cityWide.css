@@ -2,40 +2,59 @@
 }
 
 .main_head {
-  font-size: 24px;
+  font-size: 20px;
+  padding-left: 25px;
+  padding-top: 15px;
 }
 .legend_text {
   font-size: 10px;
   padding-left: 5px;
 }
-
-.sec_1_head_fonts {
-  font-size: 16px;
-}
 .sec_1_head {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
-  background-color: #6c7174;
+  justify-content: space-between;
   padding: 5px 0;
-  margin: 15px 0;
+  background-color: #6c7174;
 }
+
+.sec_1_head_fonts {
+  font-size: 16px;
+  padding-left: 29px;
+}
+
+.info_mark {
+}
+
 .sec_clr_info {
   display: flex;
   flex-direction: row;
   align-items: center;
+  padding-left: 30px;
+  margin: 0;
 }
 .sec_subhead_info {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding-left: 25px;
+  padding-left: 60px;
+}
+.sec_subhead_info_div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-right: 12px;
 }
 .sec_subhead_text {
   font-size: 16px;
-  padding: 0 5px;
   border-bottom: 1px solid #ffff;
+}
+.less_border {
+  width: 50%;
+}
+.icon {
+  padding-right: 5px;
 }
 .sec_1_clr,
 .sec_2_clr {
@@ -45,24 +64,59 @@
   background-color: #cc526c;
   border: 1px solid white;
   display: inline-block;
-  margin-right: 5px;
+  margin-right: 10px;
 }
 .sec_1_info {
-  padding: 15px 0;
+  padding: 10px 0;
 }
 .sec_1_info_text {
-  font-size: 16px;
+  font-size: 14px;
+  width: 250px;
+  padding: 10px 0;
 }
 
 .sec_2_clr {
   background-color: #ffffff;
 }
+.sec_law_clr {
+  background-color: #f78f88;
+}
+.sec_height_clr {
+  background-color: #f9c0f6;
+}
+.feature_clr {
+  background-color: #f9c3c0;
+}
+.sec_policy_clr {
+  background-color: #dfb4b1;
+}
 .btn_clr {
   background-color: #55b570;
+}
+.btn_pos {
+  padding-right: 16px;
+}
+.legend_head {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  padding-left: 33px;
+  padding-right: 60px;
+  line-height: 1;
+  padding-top: 10px;
+}
+.l_icon {
+  padding-bottom: 5px;
 }
 .lenegd_clr_sec {
   display: flex;
   flex-direction: row;
+  padding: 0 40px;
+  padding-bottom: 20px;
+
+  justify-content: space-around;
 }
 .left_bar,
 .right_bar {
@@ -104,4 +158,7 @@
 }
 .l10 {
   background-color: #cbceb8;
+}
+.ant-layout-sider-children {
+  overflow-y: scroll;
 }

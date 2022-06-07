@@ -1,10 +1,10 @@
 import React from "react";
 import { GoogleMap, Marker, useJsApiLoader } from "@react-google-maps/api";
 import { useSelector } from "react-redux";
-import store from '../store';
+import store from "../store";
 
 const containerStyle = {
-  width: "950px",
+  width: "100%",
   height: "100vh",
 };
 
@@ -16,8 +16,7 @@ function GoogleMaps() {
 
   const [map, setMap] = React.useState(null);
   const [lat, setLat] = React.useState(49.0);
-  const [lng, setLng] = React.useState(-79.90);
-
+  const [lng, setLng] = React.useState(-79.9);
 
   let center = {
     lat: lat,
@@ -25,12 +24,12 @@ function GoogleMaps() {
   };
 
   store.subscribe(() => {
-    let {location} = store.getState()
+    let { location } = store.getState();
     center.lat = location.lat;
     center.lng = location.lng;
     setLat(location.lat);
     setLng(location.long);
-  })
+  });
 
   const onLoad = React.useCallback(function callback(map) {
     const bounds = new window.google.maps.LatLngBounds(center);
@@ -52,9 +51,7 @@ function GoogleMaps() {
     >
       {/* Child components, such as markers, info windows, etc. */}
       <>
-        <Marker
-        onLoad={onLoad}
-        position={center} />
+        <Marker onLoad={onLoad} position={center} />
       </>
     </GoogleMap>
   ) : (
