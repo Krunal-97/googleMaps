@@ -21,7 +21,7 @@ import GoogleMaps from "./GoogleMaps";
 import "../assests/styles/sideNav.css";
 // import Location from './location';
 
-const { Header, Sider, Content } = Layout;
+const { Sider, Content } = Layout;
 
 function SideNav(props) {
   const [collapsed, setCollapsed] = useState(false);
@@ -33,77 +33,78 @@ function SideNav(props) {
 
   return (
     <Layout style={{ height: "100vh" }}>
-      <Sider trigger={null} collapsible collapsed={collapsed}>
-        {/* <div style={{color: 'white', textAlign: 'center', padding: '10px'}}>Dashboard</div> */}
-        <Menu
-          theme="dark"
-          mode="inline"
-          className="sideNav_icons"
-          defaultSelectedKeys={["1"]}
-          onSelect={(value) => {
-            handleOnChange(value);
-          }}
-          items={[
-            {
-              key: "1",
-              icon: <Info size={32} />,
-              label: "General Info",
-            },
-            {
-              key: "2",
-              icon: <HouseLine size={32} />,
-              label: "Sales/Rent",
-            },
-            {
-              key: "3",
-              icon: <Bank size={32} />,
-              label: "Government Land",
-            },
-            {
-              key: "4",
-              icon: <ChartBar size={32} />,
-              label: "Demographics",
-            },
-            {
-              key: "5",
-              icon: <Notepad size={32} />,
-              label: "Official Plan",
-            },
-            {
-              key: "6",
-              icon: <Buildings size={32} />,
-              label: "City Wide",
-            },
-            {
-              key: "7",
-              icon: <MapPinLine size={32} />,
-              label: "Zoning",
-            },
-            {
-              key: "8",
-              icon: <Target size={32} />,
-              label: "Development",
-            },
-            {
-              key: "9",
-              icon: <Drop size={32} />,
-              label: "Water",
-            },
+      <div className="test">
+        <Sider trigger={null} collapsible collapsed={collapsed}>
+          <Menu
+            theme="dark"
+            mode="inline"
+            className="sideNav_icons"
+            defaultSelectedKeys={["1"]}
+            onSelect={(value) => {
+              handleOnChange(value);
+            }}
+            items={[
+              {
+                key: "1",
+                icon: <i class="ph-info"></i>,
+                // label: "General Info",
+              },
+              {
+                key: "2",
+                icon: <i class="ph-crown-simple"></i>,
+                // label: "Sales/Rent",
+              },
+              {
+                key: "3",
+                icon: <i class="ph-bank"></i>,
+                // label: "Government Land",
+              },
+              {
+                key: "4",
+                icon: <i class="ph-chart-bar"></i>,
+                // label: "Demographics",
+              },
+              {
+                key: "5",
+                icon: <i class="ph-notepad"></i>,
+                // label: "Official Plan",
+              },
+              {
+                key: "6",
+                icon: <i class="ph-buildings"></i>,
+                // label: "City Wide",
+              },
+              {
+                key: "7",
+                icon: <MapPinLine size={32} />,
+                // label: "Zoning",
+              },
+              {
+                key: "8",
+                icon: <Target size={32} />,
+                // label: "Development",
+              },
+              {
+                key: "9",
+                icon: <Drop size={32} />,
+                // label: "Water",
+              },
 
-            {
-              key: "10",
-              icon: <Leaf size={32} />,
-              label: "Environment",
-            },
+              {
+                key: "10",
+                icon: <Leaf size={32} />,
+                // label: "Environment",
+              },
 
-            {
-              key: "11",
-              icon: <CrownSimple size={32} />,
-              label: "Provincial Plan",
-            },
-          ]}
-        />
-      </Sider>
+              {
+                key: "11",
+                icon: <CrownSimple size={32} />,
+                // label: "Provincial Plan",
+              },
+            ]}
+          />
+        </Sider>
+      </div>
       <Sider
         style={{ display: collapsed ? "none" : "block" }}
         className="sideInfoBar"
@@ -129,7 +130,9 @@ function SideNav(props) {
             onClick={() => setCollapsed(!collapsed)}
           />
         )}
-        <GoogleMaps className="map_container" />
+        <>
+          <GoogleMaps className="map_container" />
+        </>
       </Layout>
     </Layout>
   );

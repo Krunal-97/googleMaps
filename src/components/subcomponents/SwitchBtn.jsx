@@ -9,7 +9,7 @@ function SwitchBtn(props) {
     <div>
       <div className="sec_1_head">
         <span className="sec_1_head_fonts">
-          {val} <Question className="info_mark" size={14} />
+          {val} <i class="ph-question"></i>
         </span>
         <span className="btn_pos">
           <Switch className="btn_clr" size="small" defaultChecked />

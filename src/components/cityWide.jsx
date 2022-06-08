@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { MapTrifold, Book, CaretDown, CaretUp } from "phosphor-react";
+import React from "react";
+import { CaretDown, CaretUp } from "phosphor-react";
 
 import "../assests/styles/cityWide.css";
 import SwitchBtn from "./subcomponents/SwitchBtn";
@@ -25,7 +25,7 @@ function CityWide(props) {
 
         <div className="sec_1_legend_info">
           <span className="legend_head">
-            <p>Legend:</p>
+            <p className="legend_title">Legend:</p>
             <CaretDown className="l_icon" size={18} />
           </span>
 

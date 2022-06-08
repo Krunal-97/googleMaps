@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   CaretDown,
-  CaretUp,
   BookOpen,
   BookmarkSimple,
   SquaresFour,
@@ -52,15 +51,15 @@ function Zone(props) {
           <div>
             <span className="sec_subhead_info">
               <span className="sec_subhead_info_div">
-                <BookOpen className="icon" size={24} />
+                <BookOpen className="icon" size={26} />
                 <span className="sec_subhead_text">Chapter</span>
               </span>
               <span className="sec_subhead_info_div">
-                <BookmarkSimple className="icon" size={24} />
+                <BookmarkSimple className="icon" size={26} />
                 <span className="sec_subhead_text less_border">Section</span>
               </span>
               <span className="sec_subhead_info_div">
-                <SquaresFour className="icon" size={24} />
+                <SquaresFour className="icon" size={26} />
                 <span className="sec_subhead_text less_border">Exception</span>
               </span>
             </span>

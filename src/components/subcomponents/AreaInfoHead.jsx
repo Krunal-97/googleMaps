@@ -13,11 +13,11 @@ function AreaInfoHead(props) {
         </p>
         <span className="sec_subhead_info">
           <span className="sec_subhead_info_div">
-            <MapTrifold className="icon" size={24} />
+            <MapTrifold className="icon" size={32} />
             <span className="sec_subhead_text">Map</span>
           </span>
           <span className="sec_subhead_info_div">
-            <Book className="icon" size={24} />
+            <Book className="icon" size={32} />
             <span className="sec_subhead_text less_border">Policy</span>
           </span>
         </span>

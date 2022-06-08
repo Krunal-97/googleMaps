@@ -26,11 +26,12 @@
   max-width: none !important;
   height: 100vh;
   color: white;
-  background-color: #2f3436 !important;
+  background-color: #40464a !important;
 }
 .sideNav_icons {
-  background-color: #000000 !important;
+  background-color: #2f3436 !important;
   height: 100vh;
+  color: #fff;
 }
 
 .ant-menu-dark.ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item-selected {
@@ -44,9 +45,7 @@
 .ant-menu-vertical .ant-menu-item {
   margin-top: 50px;
 }
-/* .ant-menu-vertical .ant-menu-item:not(:last-child) {
-  margin-bottom: 20px;
-} */
+
 .ant-menu-item-icon {
   color: #fff;
   height: 36px;
