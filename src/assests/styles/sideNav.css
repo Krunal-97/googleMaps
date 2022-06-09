@@ -1,25 +1,7 @@
-.trigger {
-  padding: 0 24px;
-  font-size: 18px;
-  line-height: 64px;
-  cursor: pointer;
-  transition: color 0.3s;
+.sidenav_container {
+  width: 80px;
+  background-color: #2f3436 !important;
 }
-
-.trigger:hover {
-  color: #1890ff;
-}
-
-.logo {
-  height: 32px;
-  margin: 16px;
-  background: rgba(255, 255, 255, 0.3);
-}
-
-.site-layout .site-layout-background {
-  background: #fff;
-}
-
 .sideInfoBar {
   flex: 0 0 400px !important;
   min-width: none !important;
@@ -28,28 +10,20 @@
   color: white;
   background-color: #40464a !important;
 }
+
 .sideNav_icons {
   background-color: #2f3436 !important;
   height: 100vh;
   color: #fff;
 }
 
-.ant-menu-dark.ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item-selected {
-  background-color: #55b570;
-  margin: 0;
-}
 .ant-menu.ant-menu-inline-collapsed > .ant-menu-item {
   padding: 0 calc(50% - 30px / 2);
   margin-top: 20px;
 }
-.ant-menu-vertical .ant-menu-item {
-  margin-top: 50px;
-}
 
-.ant-menu-item-icon {
-  color: #fff;
-  height: 36px;
-  width: 36px;
+.ant-menu-inline .ant-menu-item {
+  margin-top: 20px;
 }
 
 .main_collapse_icon {
@@ -59,4 +33,26 @@
 
 .map_container {
   width: 100%;
+}
+
+.navbar__icon {
+  font-size: 34px;
+  color: white;
+  margin-top: 0px;
+}
+
+.navbar__icon i:hover {
+  color: #1a8a3a;
+}
+.ant-menu.ant-menu-dark .ant-menu-item-selected {
+  background-color: #2f3436 !important;
+}
+.ant-menu-vertical .ant-menu-item {
+  height: none;
+}
+.main_collapse_icon {
+  color: #fff;
+  width: 20px;
+  margin-top: 5px;
+  background-color: #2f3436;
 }

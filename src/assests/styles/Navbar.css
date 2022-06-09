@@ -1,0 +1,31 @@
+:root {
+  --background: #3d405b;
+  --primary: #ffffff;
+}
+
+.navbar-items {
+  display: flex;
+  background-color: #2f3436;
+  height: 100vh;
+  width: 80px;
+}
+.navbar-items i {
+  font-size: 36px;
+  color: white;
+  padding: 15px 0;
+  margin-right: 20px;
+}
+.navbar-items i:hover {
+  color: #55b570;
+}
+.navbar-items li {
+  list-style: none;
+}
+
+.nav-menu {
+  list-style: none;
+}
+
+.menu-icon {
+  display: none;
+}

@@ -15,8 +15,8 @@ function GoogleMaps() {
   });
 
   const [map, setMap] = React.useState(null);
-  const [lat, setLat] = React.useState(49.0);
-  const [lng, setLng] = React.useState(-79.9);
+  const [lat, setLat] = React.useState(43.6565512);
+  const [lng, setLng] = React.useState(-79.3804294);
 
   let center = {
     lat: lat,

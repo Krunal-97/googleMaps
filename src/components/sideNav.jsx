@@ -1,31 +1,17 @@
 import React, { useState } from "react";
 import "antd/dist/antd.css";
-import {
-  Info,
-  HouseLine,
-  Bank,
-  ChartBar,
-  Notepad,
-  Buildings,
-  MapPinLine,
-  Target,
-  Drop,
-  Leaf,
-  CrownSimple,
-  CaretCircleRight,
-  CaretCircleLeft,
-} from "phosphor-react";
+import { CaretCircleRight, CaretCircleLeft } from "phosphor-react";
 import { Layout, Menu } from "antd";
 import MenuSelect from "./menuSelect";
 import GoogleMaps from "./GoogleMaps";
 import "../assests/styles/sideNav.css";
-// import Location from './location';
+import { Tooltip } from "antd";
 
 const { Sider, Content } = Layout;
 
 function SideNav(props) {
   const [collapsed, setCollapsed] = useState(false);
-  const [key, setKey] = useState("1");
+  const [key, setKey] = useState("5");
 
   const handleOnChange = (value) => {
     setKey(value.key);
@@ -33,7 +19,7 @@ function SideNav(props) {
 
   return (
     <Layout style={{ height: "100vh" }}>
-      <div className="test">
+      <div className="sidenav_container">
         <Sider trigger={null} collapsible collapsed={collapsed}>
           <Menu
             theme="dark"
@@ -46,60 +32,124 @@ function SideNav(props) {
             items={[
               {
                 key: "1",
-                icon: <i class="ph-info"></i>,
-                // label: "General Info",
+                icon: (
+                  <>
+                    <Tooltip placement="right" title="General Info">
+                      <div className="navbar__icon">
+                        <i className="ph-info"></i>
+                      </div>
+                    </Tooltip>
+                  </>
+                ),
               },
               {
                 key: "2",
-                icon: <i class="ph-crown-simple"></i>,
-                // label: "Sales/Rent",
+                icon: (
+                  <>
+                    <Tooltip placement="right" title="Sales/Rent">
+                      <div className="navbar__icon">
+                        <i class="ph-house-line"></i>
+                      </div>
+                    </Tooltip>
+                  </>
+                ),
               },
               {
                 key: "3",
-                icon: <i class="ph-bank"></i>,
-                // label: "Government Land",
+                icon: (
+                  <>
+                    <Tooltip placement="right" title="Government Land">
+                      <div className="navbar__icon">
+                        <i class="ph-bank"></i>
+                      </div>
+                    </Tooltip>
+                  </>
+                ),
               },
               {
                 key: "4",
-                icon: <i class="ph-chart-bar"></i>,
-                // label: "Demographics",
+                icon: (
+                  <>
+                    <Tooltip placement="right" title="Demographics">
+                      <div className="navbar__icon">
+                        <i class="ph-chart-bar"></i>
+                      </div>
+                    </Tooltip>
+                  </>
+                ),
               },
               {
                 key: "5",
-                icon: <i class="ph-notepad"></i>,
-                // label: "Official Plan",
+                icon: (
+                  <>
+                    <Tooltip placement="right" title="Official Plan">
+                      <div className="navbar__icon">
+                        <i class="ph-notepad"></i>
+                      </div>
+                    </Tooltip>
+                  </>
+                ),
               },
               {
                 key: "6",
-                icon: <i class="ph-buildings"></i>,
-                // label: "City Wide",
+                icon: (
+                  <>
+                    <Tooltip placement="right" title="City Wide">
+                      <div className="navbar__icon">
+                        <i class="ph-buildings"></i>
+                      </div>
+                    </Tooltip>
+                  </>
+                ),
               },
               {
                 key: "7",
-                icon: <MapPinLine size={32} />,
-                // label: "Zoning",
+                icon: (
+                  <>
+                    <Tooltip placement="right" title="Zoning">
+                      <div className="navbar__icon">
+                        <i class="ph-target"></i>
+                      </div>
+                    </Tooltip>
+                  </>
+                ),
               },
               {
                 key: "8",
-                icon: <Target size={32} />,
-                // label: "Development",
+                icon: (
+                  <>
+                    <Tooltip placement="right" title="Development">
+                      <div className="navbar__icon">
+                        <i class="ph-drop"></i>
+                      </div>
+                    </Tooltip>
+                  </>
+                ),
               },
               {
                 key: "9",
-                icon: <Drop size={32} />,
-                // label: "Water",
+                icon: (
+                  <>
+                    <Tooltip placement="right" title="Water">
+                      <div className="navbar__icon">
+                        <i class="ph-leaf"></i>
+                      </div>
+                    </Tooltip>
+                  </>
+                ),
               },
 
               {
                 key: "10",
-                icon: <Leaf size={32} />,
-                // label: "Environment",
-              },
-
-              {
-                key: "11",
-                icon: <CrownSimple size={32} />,
-                // label: "Provincial Plan",
+                icon: (
+                  <>
+                    <Tooltip placement="right" title="Environment">
+                      <div className="navbar__icon">
+                        <i class="ph-crown-simple"></i>
+                      </div>
+                    </Tooltip>
+                  </>
+                ),
               },
             ]}
           />
@@ -116,17 +166,18 @@ function SideNav(props) {
           <MenuSelect selectedKey={key} />
         </Content>
       </Sider>
+
       <Layout className="site-layout">
         {collapsed ? (
           <CaretCircleRight
             className="main_collapse_icon"
-            size={32}
+            size={22}
             onClick={() => setCollapsed(!collapsed)}
           />
         ) : (
           <CaretCircleLeft
             className="main_collapse_icon"
-            size={32}
+            size={22}
             onClick={() => setCollapsed(!collapsed)}
           />
         )}

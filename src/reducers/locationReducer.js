@@ -7,8 +7,8 @@ const locationReducer = (state, action) => {
       };
     default:
       return {
-        lat: 43.653226,
-        long: -79.3831843,
+        lat: 43.6565512,
+        long: -79.3804294,
       };
   }
 };

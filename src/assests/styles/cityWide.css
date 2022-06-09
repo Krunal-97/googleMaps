@@ -1,9 +1,3 @@
-.citywide_container {
-}
-p {
-  margin-bottom: 10px;
-}
-
 .main_head {
   font-size: 20px;
   padding: 10px;
@@ -70,6 +64,9 @@ p.sec_clr_info {
 .icon {
   padding-right: 5px;
 }
+p {
+  margin-bottom: 10px;
+}
 .sec_1_clr,
 .sec_2_clr {
   height: 26px;
@@ -88,7 +85,6 @@ p.sec_clr_info {
   width: 250px;
   padding: 10px 0;
 }
-
 .sec_2_clr {
   background-color: #ffffff;
 }
@@ -179,7 +175,6 @@ p.sec_clr_info {
 .radio_btn_pos {
   padding: 10px 0 10px 33px;
 }
-
 .radio_btn {
   color: #fff;
 }
@@ -211,12 +206,4 @@ p.sec_clr_info {
 }
 .data_sec {
   text-align: center;
-}
-
-.test {
-  width: 80px;
-  background-color: #2f3436 !important;
-}
-.mytest {
-  color: #c4c4c4;
 }
