@@ -31,7 +31,7 @@ function GoogleMaps() {
   });
 
   const onLoad = React.useCallback(function callback(map) {
-    const bounds = new window.google.maps.LatLngBounds(center);
+    // const bounds = new window.google.maps.LatLngBounds(center);
     setMap(map);
   }, []);
 

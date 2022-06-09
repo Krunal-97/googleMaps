@@ -59,7 +59,7 @@ function SideNav(props) {
                   <>
                     <Tooltip placement="right" title="Government Land">
                       <div className="navbar__icon">
-                        <i class="ph-bank"></i>
+                        <i className="ph-bank"></i>
                       </div>
                     </Tooltip>
                   </>
@@ -71,7 +71,7 @@ function SideNav(props) {
                   <>
                     <Tooltip placement="right" title="Demographics">
                       <div className="navbar__icon">
-                        <i class="ph-chart-bar"></i>
+                        <i className="ph-chart-bar"></i>
                       </div>
                     </Tooltip>
                   </>
@@ -83,7 +83,7 @@ function SideNav(props) {
                   <>
                     <Tooltip placement="right" title="Official Plan">
                       <div className="navbar__icon">
-                        <i class="ph-notepad"></i>
+                        <i className="ph-notepad"></i>
                       </div>
                     </Tooltip>
                   </>
@@ -95,7 +95,7 @@ function SideNav(props) {
                   <>
                     <Tooltip placement="right" title="City Wide">
                       <div className="navbar__icon">
-                        <i class="ph-buildings"></i>
+                        <i className="ph-buildings"></i>
                       </div>
                     </Tooltip>
                   </>
@@ -107,7 +107,7 @@ function SideNav(props) {
                   <>
                     <Tooltip placement="right" title="Zoning">
                       <div className="navbar__icon">
-                        <i class="ph-target"></i>
+                        <i className="ph-target"></i>
                       </div>
                     </Tooltip>
                   </>
@@ -119,7 +119,7 @@ function SideNav(props) {
                   <>
                     <Tooltip placement="right" title="Development">
                       <div className="navbar__icon">
-                        <i class="ph-drop"></i>
+                        <i className="ph-drop"></i>
                       </div>
                     </Tooltip>
                   </>
@@ -131,7 +131,7 @@ function SideNav(props) {
                   <>
                     <Tooltip placement="right" title="Water">
                       <div className="navbar__icon">
-                        <i class="ph-leaf"></i>
+                        <i className="ph-leaf"></i>
                       </div>
                     </Tooltip>
                   </>
@@ -144,7 +144,7 @@ function SideNav(props) {
                   <>
                     <Tooltip placement="right" title="Environment">
                       <div className="navbar__icon">
-                        <i class="ph-crown-simple"></i>
+                        <i className="ph-crown-simple"></i>
                       </div>
                     </Tooltip>
                   </>

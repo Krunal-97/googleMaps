@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { MagnifyingGlass, X } from "phosphor-react";
-import { connect, useSelector } from "react-redux";
+import { connect } from "react-redux";
 import PlacesAutocomplete, {
   geocodeByAddress,
   getLatLng,
@@ -10,7 +10,6 @@ import "../assests/styles/search.css";
 
 function Search(props) {
   const [address, setAddress] = useState("");
-  const location = useSelector((state) => state);
 
   const handleSelect = (address) => {
     setAddress(address);
@@ -29,14 +28,6 @@ function Search(props) {
   const handleChange = (address) => {
     setAddress(address);
   };
-
-  const mapStateToProps = (state) => ({
-    ...state,
-  });
-
-  const mapDispatchToProps = (dispatch) => ({
-    latlong: () => dispatch(setLatLong),
-  });
 
   return (
     <PlacesAutocomplete
