@@ -209,14 +209,14 @@ p {
 .data_sec {
   text-align: center;
 }
-.ant-switch-checked {
-  background-color: #52b371 !important;
+.ant-radio-checked .ant-radio-inner {
+  border-color: #52b371 !important ;
 }
 
-.ant-radio-checked .ant-radio-inner {
+.ant-radio-checked .ant-radio-inner:after {
   background-color: #52b371;
 }
 
-.ant-radio-checked .ant-radio-inner {
-  border-color: #52b371 !important;
+.ant-radio:hover .ant-radio-inner {
+  border-color: #52b371;
 }

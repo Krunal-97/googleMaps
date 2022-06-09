@@ -17,9 +17,11 @@ function MenuSelect(props) {
         return <Zone />;
       default:
         return (
-          <a href="https://www.mapyourproperty.com/">
-            https://www.mapyourproperty.com/
-          </a>
+          <center>
+            <a href="https://www.mapyourproperty.com/">
+              https://www.mapyourproperty.com/
+            </a>
+          </center>
         );
     }
   };
