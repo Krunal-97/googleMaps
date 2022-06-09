@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { HouseLine } from "phosphor-react";
-import "../assests/styles/zone.css";
 import { Radio } from "antd";
-import "../assests/styles/cityWide.css";
 import InfoTextHead from "./subcomponents/InfoTextHead";
 import DataInfo from "./subcomponents/DataInfo";
+import "../assests/styles/zone.css";
+import "../assests/styles/cityWide.css";
 
 function GeneralInfo(props) {
   const [value, setValue] = useState(1);
@@ -88,7 +88,6 @@ function GeneralInfo(props) {
   ];
 
   const onChange = (e) => {
-    console.log("radio checked", e.target.value);
     setValue(e.target.value);
   };
 
@@ -97,7 +96,6 @@ function GeneralInfo(props) {
       <div className="citywide_heading heading">
         <p className="main_head">Market Comparables</p>
       </div>
-
       <div className="radio_btn_pos">
         <Radio.Group onChange={onChange} value={value}>
           <Radio className="radio_btn" value={1}>
@@ -108,34 +106,26 @@ function GeneralInfo(props) {
           </Radio>
         </Radio.Group>
       </div>
-
       <div className="info_home">
         <span className="">
           <HouseLine size={32} />
         </span>
-
         <span className="info_home_text">
           <p className="">Neighbourhood: Willowdale </p>
           <p className="">Census Subdivision: Toronto</p>
         </span>
       </div>
-
       <div className="citywide_subheading_1 citywide_subheading">
         <InfoTextHead val={"MLS Price"} />
       </div>
-
       <DataInfo data={data1} />
-
       <div className="citywide_subheading_1 citywide_subheading">
         <InfoTextHead val={"CMHC Average Sold Price"} />
       </div>
-
       <DataInfo data={data2} />
-
       <div className="citywide_subheading_1 citywide_subheading">
         <InfoTextHead val={"CMHC Absorption (By Type)"} />
       </div>
-
       <DataInfo data={data3} />
     </div>
   );

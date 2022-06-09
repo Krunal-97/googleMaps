@@ -5,20 +5,18 @@ import {
   BookmarkSimple,
   SquaresFour,
 } from "phosphor-react";
-import "../assests/styles/zone.css";
-
-import "../assests/styles/cityWide.css";
 import SwitchBtn from "./subcomponents/SwitchBtn";
 import AreaInfoHead from "./subcomponents/AreaInfoHead";
 import ColourAreaInfo from "./subcomponents/ColourAreaInfo";
 import InfoTextHead from "./subcomponents/InfoTextHead";
+import "../assests/styles/zone.css";
+import "../assests/styles/cityWide.css";
 
 function Zone(props) {
   const switchVal_2 = "Zoning By-Law ";
   const switchVal_3 = "Lot Coverage";
   const switchVal_4 = "Height";
   const switchVal_5 = "Policy Area";
-
   const areaInfoHead_1 = ["By-Law 438-86 (Toronto)"];
 
   return (
@@ -26,23 +24,19 @@ function Zone(props) {
       <div className="citywide_heading heading">
         <p className="main_head">Zoning By-Law</p>
       </div>
-
       <div className="citywide_subheading_1 citywide_subheading">
         <InfoTextHead val={"Former By-Law"} />
         <AreaInfoHead val={areaInfoHead_1} className="sec_2_clr" />
-
         <div className="sec_1_legend_info">
           <span className="legend_head">
             <p>Legend:</p>
             <CaretDown className="l_icon" size={18} />
           </span>
         </div>
-
         <div>
           <SwitchBtn val={switchVal_2} />
           <p className="zone_head_text">By-Law 569-2013</p>
         </div>
-
         <div>
           <ColourAreaInfo
             val={"COMMERCIAL RESIDENTIA CR 12.0 (c8.0; r11.7) SS1 (x2325)"}
@@ -71,7 +65,6 @@ function Zone(props) {
         <p>Legend:</p>
         <CaretDown className="l_icon" size={18} />
       </span>
-
       <div>
         <SwitchBtn val={switchVal_3} />
         <ColourAreaInfo

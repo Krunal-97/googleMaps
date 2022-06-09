@@ -2,7 +2,6 @@ import React from "react";
 
 function ColourAreaInfo(props) {
   const val = props;
-  console.log(val);
   return (
     <div>
       <p className="sec_clr_info">

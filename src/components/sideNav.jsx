@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-import "antd/dist/antd.css";
 import { CaretCircleRight, CaretCircleLeft } from "phosphor-react";
-import { Layout, Menu } from "antd";
+import { Layout, Menu, Tooltip } from "antd";
 import MenuSelect from "./menuSelect";
 import GoogleMaps from "./GoogleMaps";
+import "antd/dist/antd.css";
 import "../assests/styles/sideNav.css";
-import { Tooltip } from "antd";
 
 const { Sider, Content } = Layout;
 

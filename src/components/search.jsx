@@ -1,20 +1,16 @@
 import React, { useState } from "react";
-
-import "../assests/styles/search.css";
+import { MagnifyingGlass, X } from "phosphor-react";
+import { connect, useSelector } from "react-redux";
 import PlacesAutocomplete, {
   geocodeByAddress,
   getLatLng,
 } from "react-places-autocomplete";
-import { MagnifyingGlass, X } from "phosphor-react";
-import { connect, useSelector } from "react-redux";
-// import rotateAction from "actions/rotateAction";
 import setLatLong from "../actions/setLatLong";
+import "../assests/styles/search.css";
 
 function Search(props) {
   const [address, setAddress] = useState("");
-
   const location = useSelector((state) => state);
-  console.log("searchCOMP", location);
 
   const handleSelect = (address) => {
     setAddress(address);
@@ -22,7 +18,6 @@ function Search(props) {
     geocodeByAddress(address)
       .then((results) => getLatLng(results[0]))
       .then((latLng) => {
-        console.log("Success", latLng);
         props.setLatLong({
           lat: latLng.lat,
           long: latLng.lng,
@@ -82,7 +77,6 @@ function Search(props) {
               const className = suggestion.active
                 ? "suggestion-item--active"
                 : "suggestion-item";
-              // inline style for demonstration purpose
               const style = suggestion.active
                 ? {
                     backgroundColor: "#fafafa",
@@ -122,5 +116,4 @@ const mapDispatchToProps = (dispatch) => ({
   setLatLong: (payload) => dispatch(setLatLong(payload)),
 });
 
-// export default Search;
 export default connect(mapStateToProps, mapDispatchToProps)(Search);

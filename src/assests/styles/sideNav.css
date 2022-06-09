@@ -1,3 +1,5 @@
+/* Side Navbar Styling */
+
 .sidenav_container {
   width: 80px;
   background-color: #2f3436 !important;
@@ -10,37 +12,30 @@
   color: white;
   background-color: #40464a !important;
 }
-
 .sideNav_icons {
   background-color: #2f3436 !important;
   height: 100vh;
   color: #fff;
 }
-
 .ant-menu.ant-menu-inline-collapsed > .ant-menu-item {
   padding: 0 calc(50% - 30px / 2);
   margin-top: 20px;
 }
-
 .ant-menu-inline .ant-menu-item {
   margin-top: 20px;
 }
-
 .main_collapse_icon {
   position: absolute;
   z-index: 1;
 }
-
 .map_container {
   width: 100%;
 }
-
 .navbar__icon {
   font-size: 34px;
   color: white;
   margin-top: 0px;
 }
-
 .navbar__icon i:hover {
   color: #1a8a3a;
 }

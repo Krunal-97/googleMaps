@@ -1,6 +1,5 @@
 import React from "react";
 import { GoogleMap, Marker, useJsApiLoader } from "@react-google-maps/api";
-import { useSelector } from "react-redux";
 import store from "../store";
 
 const containerStyle = {
@@ -33,14 +32,13 @@ function GoogleMaps() {
 
   const onLoad = React.useCallback(function callback(map) {
     const bounds = new window.google.maps.LatLngBounds(center);
-    // map.fitBounds(bounds);
     setMap(map);
   }, []);
 
   const onUnmount = React.useCallback(function callback(map) {
     setMap(null);
   }, []);
-  console.log("center", center);
+
   return isLoaded ? (
     <GoogleMap
       mapContainerStyle={containerStyle}
@@ -49,7 +47,6 @@ function GoogleMaps() {
       onLoad={onLoad}
       onUnmount={onUnmount}
     >
-      {/* Child components, such as markers, info windows, etc. */}
       <>
         <Marker onLoad={onLoad} position={center} />
       </>

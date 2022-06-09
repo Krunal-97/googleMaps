@@ -2,7 +2,6 @@ import React from "react";
 
 function DataInfo(props) {
   const val = props.data;
-  console.log(val);
   return (
     <div>
       <div className="data_container">

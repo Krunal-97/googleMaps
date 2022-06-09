@@ -1,16 +1,16 @@
+/* Search bar Styling */
+
 .search-container {
   border-radius: 50px;
-  border: 2px solid white;
+  border: 2px solid #ffff;
   width: 80%;
   height: 40px;
   margin-left: 28px;
   margin-top: 20px;
 }
-
 .input-icons i {
   position: absolute;
 }
-
 .input-icons {
   width: 90%;
   margin-left: 15px;
@@ -20,7 +20,6 @@
   border-radius: 50px;
   background-color: white;
 }
-
 .input-field {
   width: 76%;
   height: 35px;
@@ -28,7 +27,6 @@
   border: none;
   color: black;
 }
-
 input:focus,
 select:focus,
 textarea:focus,

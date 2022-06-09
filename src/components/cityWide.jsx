@@ -1,14 +1,12 @@
 import React from "react";
 import { CaretDown, CaretUp } from "phosphor-react";
-
-import "../assests/styles/cityWide.css";
 import SwitchBtn from "./subcomponents/SwitchBtn";
 import AreaInfoHead from "./subcomponents/AreaInfoHead";
+import "../assests/styles/cityWide.css";
 
 function CityWide(props) {
   const switchVal_1 = "Official Plan Land Use";
   const switchVal_2 = "Secondary Plan";
-
   const areaInfoHead_1 = ["Mixed Use Area:"];
   const areaInfoHead_2 = ["41 - Downtown Plan:"];
   const areaInfoHead_3 = ["39 King - Parliament:"];
@@ -18,17 +16,14 @@ function CityWide(props) {
       <div className="citywide_heading heading">
         <p className="main_head">Official Plan</p>
       </div>
-
       <div className="citywide_subheading_1 citywide_subheading">
         <SwitchBtn val={switchVal_1} />
         <AreaInfoHead val={areaInfoHead_1} className="sec_1_clr" />
-
         <div className="sec_1_legend_info">
           <span className="legend_head">
             <p className="legend_title">Legend:</p>
             <CaretDown className="l_icon" size={18} />
           </span>
-
           <div className="lenegd_clr_sec">
             <div className="left_bar">
               <span className="legend_clr_container">
