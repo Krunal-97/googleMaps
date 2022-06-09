@@ -218,7 +218,6 @@ p {
 .ant-radio-checked .ant-radio-inner {
   border-color: #52b371;
 }
-
 .ant-radio-checked .ant-radio-inner:after {
   background-color: #52b371;
 }
