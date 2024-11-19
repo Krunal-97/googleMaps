@@ -1,4 +1,4 @@
-# MapYourProperty Frontend Engineer Case Study
+# Frontend Engineer Case Study
 
 ## Tech Stack
 
